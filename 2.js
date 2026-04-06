@@ -1,17 +1,19 @@
-// Function to print a staircase
-function printStaircase(n) {
-
-    for (let i = 1; i <= n; i++) {
-        let step = "";
-
-        for (let j = 1; j <= i; j++) {
-            step += "#";
-        }
-
-        console.log(step);
+function esPalindromo(numero) {
+    // Convertir el número a string
+    let texto = numero.toString();
+    
+    // Invertir el string
+    let invertido = texto.split('').reverse().join('');
+    
+    // Comparar
+    if (texto === invertido) {
+        return true;
+    } else {
+        return false;
     }
-
 }
 
-// Call the function
-printStaircase(5);
+// Ejemplos de uso
+console.log(esPalindromo(121));   // true
+console.log(esPalindromo(123));   // false
+console.log(esPalindromo(1221));  // true
